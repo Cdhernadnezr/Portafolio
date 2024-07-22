@@ -164,3 +164,76 @@ function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... (mantén tu código existente aquí)
+
+    // Inicializar ScrollMagic
+    const controller = new ScrollMagic.Controller();
+
+    // Animación para la sección de inicio
+    const homeTimeline = gsap.timeline();
+    homeTimeline.from('.home__title', {opacity: 0, y: 50, duration: 1})
+                .from('.home__text', {opacity: 0, y: 30, duration: 1}, '-=0.5');
+
+    new ScrollMagic.Scene({
+        triggerElement: '#home',
+        triggerHook: 0.8,
+        reverse: false
+    })
+    .setTween(homeTimeline)
+    .addTo(controller);
+
+    // Animación para las tarjetas de proyectos
+    gsap.utils.toArray('.project-card').forEach((card, i) => {
+        const cardAnim = gsap.from(card, {
+            y: 100,
+            opacity: 0,
+            duration: 0.8,
+            paused: true
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: card,
+            triggerHook: 0.9,
+            reverse: false
+        })
+        .setTween(cardAnim)
+        .addTo(controller);
+    });
+
+    // Animación para la sección "Sobre Mí"
+    const aboutTimeline = gsap.timeline();
+    aboutTimeline.from('.about__profile-pic', {opacity: 0, scale: 0.5, duration: 1})
+                 .from('.about__text p', {opacity: 0, y: 30, stagger: 0.2, duration: 0.8}, '-=0.5');
+
+    new ScrollMagic.Scene({
+        triggerElement: '#about',
+        triggerHook: 0.7,
+        reverse: false
+    })
+    .setTween(aboutTimeline)
+    .addTo(controller);
+
+    // Animación para el formulario de contacto
+    const contactTimeline = gsap.timeline();
+    contactTimeline.from('.contact__form', {opacity: 0, scale: 0.9, duration: 1})
+                   .from('.contact__input, .contact__textarea', {opacity: 0, y: 20, stagger: 0.2, duration: 0.5}, '-=0.5');
+
+    new ScrollMagic.Scene({
+        triggerElement: '#contact',
+        triggerHook: 0.8,
+        reverse: false
+    })
+    .setTween(contactTimeline)
+    .addTo(controller);
+
+    // Animación del navbar al hacer scroll
+    new ScrollMagic.Scene({
+        triggerElement: 'body',
+        triggerHook: 0,
+        offset: 100
+    })
+    .setClassToggle('.navbar', 'scrolled')
+    .addTo(controller);
+});

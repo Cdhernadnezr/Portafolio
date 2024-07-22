@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio profesional de [Tu Nombre] - Desarrollador web y estudiante de ingeniería electrónica especializado en IA y Python">
-    <title>Portafolio de [Tu Nombre] - Desarrollador Web & IA</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Portafolio de Cristopher Hernandez Romanos - Desarrollador Web & IA">
+    <title>Portafolio de Cristopher Hernandez - Desarrollador Web & IA</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tudominio.com/">
@@ -23,52 +23,52 @@
     <meta property="twitter:image" content="https://tudominio.com/twitter-image.jpg">
 </head>
 <body>
-    <header>
-        <nav id="navbar">
+    <header class="header">
+        <nav class="navbar">
             <div class="container">
-                <h1 id="logo">Mi Portafolio</h1>
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                <h1 class="navbar__logo">Mi Portafolio</h1>
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="#home" class="navbar__link">Inicio</a></li>
+                    <li class="navbar__item"><a href="#projects" class="navbar__link">Proyectos</a></li>
+                    <li class="navbar__item"><a href="#about" class="navbar__link">Sobre Mí</a></li>
+                    <li class="navbar__item"><a href="#contact" class="navbar__link">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="home">
+        <section id="home" class="home">
             <div class="container">
-                <h2>Bienvenido a mi Portafolio</h2>
-                <p>Soy un desarrollador web apasionado por crear experiencias digitales únicas.</p>
+                <h2 class="home__title">Bienvenido a mi Portafolio</h2>
+                <p class="home__text">Soy un desarrollador web apasionado por crear experiencias digitales únicas.</p>
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="section">
             <div class="container">
-                <h2>Mis Proyectos</h2>
-                <div class="project-grid">
+                <h2 class="section__title">Mis Proyectos</h2>
+                <div class="projects__grid">
                     <div class="project-card">
-                        <img src="project1.jpeg" alt="Imagen del Proyecto 1" width="300" height="200" loading="lazy">
-                        <div class="project-card-content">
-                            <h3>Proyecto 1</h3>
+                        <img src="img/project1.jpeg" alt="Imagen del Proyecto 1" class="project-card__img" loading="lazy">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Proyecto 1</h3>
                             <p>Descripción breve del proyecto 1.</p>
                             <a href="project1.html" class="btn">Ver Proyecto</a>
                         </div>
                     </div>
                     <div class="project-card">
-                        <img src="project2.jpeg" alt="Imagen del Proyecto 2" width="300" height="200" loading="lazy">
-                        <div class="project-card-content">
-                            <h3>Proyecto 2</h3>
+                        <img src="img/project2.jpeg" alt="Imagen del Proyecto 2" class="project-card__img" loading="lazy">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Proyecto 2</h3>
                             <p>Descripción breve del proyecto 2.</p>
                             <a href="project2.html" class="btn">Ver Proyecto</a>
                         </div>
                     </div>
                     <div class="project-card">
-                        <img src="project3.jpeg" alt="Imagen del Proyecto 3" width="300" height="200" loading="lazy">
-                        <div class="project-card-content">
-                            <h3>Proyecto 3</h3>
+                        <img src="img/project3.jpeg" alt="Imagen del Proyecto 3" class="project-card__img" loading="lazy">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Proyecto 3</h3>
                             <p>Descripción breve del proyecto 3.</p>
                             <a href="project3.html" class="btn">Ver Proyecto</a>
                         </div>
@@ -77,51 +77,52 @@
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="section">
             <div class="container">
-                <h2>Sobre Mí</h2>
-                <div class="about-content">
-                    <img src="perfil.png" alt="Mi foto de perfil" class="profile-pic" width="150" height="150" loading="lazy">
-                    <div class="about-text">
+                <h2 class="section__title">Sobre Mí</h2>
+                <div class="about__content">
+                    <img src="img/perfil.png" alt="Mi foto de perfil" class="about__profile-pic" loading="lazy">
+                    <div class="about__text">
                         <p>¡Hola! Soy un estudiante de ingeniería electrónica con una pasión ardiente por la inteligencia artificial y la programación, especialmente en Python. Desde que descubrí el mundo de la electrónica y la informática, me he sentido fascinado por la forma en que la tecnología puede transformar y mejorar nuestras vidas.</p>
                         <p>Mi enfoque se centra en explorar y desarrollar soluciones innovadoras que integren la electrónica con el poder del aprendizaje automático y la IA. Creo firmemente en el poder de la programación para crear soluciones eficientes y escalables que resuelvan problemas del mundo real.</p>
                         <p>Fuera de mis estudios, disfruto explorando nuevos proyectos de programación, aprendiendo nuevas técnicas y mejorando mis habilidades día a día. Estoy emocionado por el futuro de la tecnología y cómo podemos utilizarla para hacer un impacto positivo en nuestro entorno.</p>
-                        <p> </p>
                         <a href="#" class="btn" download>Descargar CV</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="section contact">
             <div class="container">
-                <h2>Contacto</h2>
-                <form id="contact-form">
-                    <input type="text" name="name" placeholder="Nombre" required aria-label="Nombre">
-                    <input type="email" name="email" placeholder="Email" required aria-label="Email">
-                    <textarea name="message" placeholder="Mensaje" required aria-label="Mensaje"></textarea>
+                <h2 class="section__title">Contacto</h2>
+                <form id="contact-form" class="contact__form">
+                    <input type="text" name="name" placeholder="Nombre" required aria-label="Nombre" class="contact__input">
+                    <input type="email" name="email" placeholder="Email" required aria-label="Email" class="contact__input">
+                    <textarea name="message" placeholder="Mensaje" required aria-label="Mensaje" class="contact__textarea"></textarea>
                     <button type="submit" class="btn">Enviar Mensaje</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>© <span id="year"></span> Mi Portafolio. Todos los derechos reservados.</p>
-        <div class="social-links">
-            <a href="https://github.com/Danhzro" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <div class="footer__social-links">
+            <a href="https://github.com/Danhzro" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">
                 <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
                 <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="mailto:hernandezromanos@gmail.com" aria-label="Email">
+            <a href="mailto:hernandezromanos@gmail.com" class="footer__social-link" aria-label="Email">
                 <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
         </div>
     </footer>
 
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous" defer></script>
-    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
